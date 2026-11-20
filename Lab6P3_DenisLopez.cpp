@@ -5,9 +5,9 @@
 #include <iostream>
 using namespace std;
 int main(){
-	vector <Super>supers;
-	supers.push_back(Super("Soldier Boy", 'A', "explosion"));
-	vector <Humano>humanos;
+	vector <Super*>supers;
+	vector <Humano*>humanos;
+
 }
 //nombre, rango, poder
 // 4 humanos en vector humanos = Billy Butcher, Hughie, MM, Frenchie

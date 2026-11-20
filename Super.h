@@ -3,11 +3,13 @@
 class Super : public Personaje {
 	char _rango;
 	string _poder;
-	double multiplicador;
+	double _multiplicador;
 	void valores();
 public:
 	Super(string nombre, char rango, string poder);
 	~Super();
 	void habilidadEspecial(Personaje& objetivo);
 	string getRangoTexto();
+	double getMultiplicador();
+
 };
