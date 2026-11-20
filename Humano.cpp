@@ -9,18 +9,22 @@ void Humano::atacar(Personaje& objetivo) {
 	if (tieneV24()) {
 		int salud = objetivo.getHP();
 		int ataque = salud - (Humano::getAtaque()+40);
+		objetivo.setHP(ataque);
 	}
 	else {
 		int salud = objetivo.getHP();
 		int ataque = salud - Humano::getAtaque();
+		objetivo.setHP(ataque);
 	}
 }
 void Humano::habilidadEspecial(Personaje& objetivo) {
 	if (tieneV24()) {
 		int ataque = (Humano::getAtaque() + 40) * 2;
+		objetivo.setHP(ataque);
 	}
 	else {
 		int ataque = (Humano::getDefensa() /2) +15;
+		objetivo.setHP(ataque);
 	}
 }
 void Humano::recibirDanio(int cantidad) {

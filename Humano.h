@@ -11,7 +11,7 @@ public:
 	void activarV24();
 	void pasarTurno();
 	bool tieneV24();
-	Humano(string nombre, int hp, int hpMax, int ataque, int defensa, int turnosV24);
+	Humano(string nombre, int hp, int hpMax, int ataque, int defensa);
 	~Humano();
 	int getTurnos();
 	void setTurnos(int turnos);

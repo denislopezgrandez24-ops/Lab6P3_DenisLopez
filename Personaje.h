@@ -28,4 +28,3 @@ public:
 	int getDefensa();
 	void setDefensa(int defensa);
 };
-template class Inventario <string>;

@@ -139,7 +139,24 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Humano.cpp" />
     <ClCompile Include="Lab6P3_DenisLopez.cpp" />
+    <ClCompile Include="Personaje.cpp" />
+    <ClCompile Include="Super.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Humano.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">yes</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Inventario.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">yes</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Personaje.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">yes</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Super.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">yes</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

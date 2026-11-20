@@ -7,6 +7,7 @@ template<class T>
 class Inventario {
 	vector<T>elementos;
 public:
+	Inventario();
 	void agregar(T item) {
 		elementos.push_back(item);
 	}
