@@ -6,6 +6,9 @@ Personaje::Personaje(string nombre, int hp, int hpMax, int ataque, int defensa) 
 	this->_ataque = ataque;
 	this->_defensa = defensa;
 }
+Personaje::Personaje(string nombre) {
+	this->_nombre = nombre;
+}
 Personaje::~Personaje() {
 
 }
@@ -31,11 +34,11 @@ int Personaje::getAtaque() {
 	return _ataque;
 }
 void Personaje::setAtaque(int ataque) {
-
+	_ataque = ataque;
 }
 int Personaje::getDefensa() {
-
+	return _defensa;
 }
 void Personaje::setDefensa(int defensa) {
-
+	_defensa = defensa;
 }

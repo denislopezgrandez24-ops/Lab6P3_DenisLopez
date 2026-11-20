@@ -1,4 +1,5 @@
 #pragma once
+#include "Inventario.h"
 #include "iostream"
 using namespace std;
 class Personaje {
@@ -14,6 +15,7 @@ public:
 	void curar(int cantidad);
 	bool estaVivo();
 	Personaje(string nombre, int hp, int hpMax, int ataque, int defensa);
+	Personaje(string nombre);
 	~Personaje();
 	string getNombre();
 	void setNombre(string nombre);
@@ -26,3 +28,4 @@ public:
 	int getDefensa();
 	void setDefensa(int defensa);
 };
+template class Inventario <string>;
