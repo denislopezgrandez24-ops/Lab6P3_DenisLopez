@@ -8,10 +8,38 @@ vector <Humano*>humanos;//primer vector
 vector <Super*>supers;//segundo vector
 void luchar() {
 	int rondas = 0;
-	for (int indice = 0; indice < supers.size();indice++) {
-		if (rondas>5) {
-			cout << ">>> APARECE: " << supers[indice]->getNombre() << "[Rango " << supers[indice]->getRangoTexto() << "] (HP: " << supers[indice]->getHP() << ") <<<" << endl;
+	int indice12 = 0;
+	while (rondas<5) {
+		cout << ">>> APARECE: " << supers[0]->getNombre() << "[Rango " << supers[0]->getRangoTexto() << "] (HP: " << supers[0]->getHP() << ") <<<" << endl;
+		cout << "Turno de  " << humanos[0]->getNombre() <<  "(HP: " << humanos[0]->getHP() << "/ "<< humanos[0]->getHP()<<") <<<" << endl;
+		int opcion;
+		cout << "1. Atacar | 2. Habilidad Especial | 3. Usar Mochila: ";
+		cin >> opcion;
+		cout << endl;
+		switch (opcion) {
+		case 1: {
+			cout << humanos[0]->getNombre() << " dispara armamento tactico a " << supers[0]->getNombre()<<endl;
+			supers[0]->setHP(supers[0]->getHP() - humanos[0]->getAtaque());
+			cout << "-> "<< supers[0]->getNombre() << " recibe "<< humanos[0]->getAtaque() << " de dano" << "(HP: " << supers[0]->getHP() << "/ " << supers[0]->getHP() << ") <<<" << endl;
+			break;
 		}
+		case 2: {
+			cout << "[ANTI-SUPE] "<<humanos[0]->getNombre() << " usa balas perforantes contra " << supers[0]->getNombre() <<"!" << endl;
+			supers[0]->setHP(supers[0]->getHP() - humanos[0]->getAtaque());
+			cout << "-> " << supers[0]->getNombre() << " recibe " << humanos[0]->getAtaque() << " de dano" << "(HP: " << supers[0]->getHP() << "/ " << supers[0]->getHP() << ") <<<" << endl;
+			break;
+		}
+		default: {
+			cout << "0. Botiquin" << endl;
+			cout << "1. Vial V24" << endl;
+			cout << "2. Granada Termita" << endl;
+			int opcion2;
+			cout << "Elige objeto: " << endl;
+			cin >> opcion2;
+			cout << supers[0]->getNombre() << "recibe " << humanos[0]->getAtaque() << "de dano" << "(HP: " << supers[0]->getHP() << "/ " << supers[0]->getHP() << ") <<<" << endl;
+		}
+		}
+		rondas++;
 	}
 }
 int main(){
